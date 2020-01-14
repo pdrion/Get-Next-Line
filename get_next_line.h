@@ -6,7 +6,7 @@
 /*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:15:52 by pdrion            #+#    #+#             */
-/*   Updated: 2019/12/20 18:32:03 by pdrion           ###   ########.fr       */
+/*   Updated: 2020/01/14 18:12:25 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 int		get_next_line(int fd, char **line);
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 8
+#  define BUFFER_SIZE 2
 # endif
 
 #endif
