@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pdrion <pdrion@student.42.frexport>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/20 18:17:41 by pdrion            #+#    #+#             */
-/*   Updated: 2020/01/16 20:09:46 by pdrion           ###   ########.fr       */
+/*   Created: 2020/01/16 20:01:31 by pdrion            #+#    #+#             */
+/*   Updated: 2020/01/16 20:10:17 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static int	newline(char **str, char **line)
 {

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pdrion <pdrion@student.42.frexport>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 14:15:52 by pdrion            #+#    #+#             */
-/*   Updated: 2020/01/16 20:05:58 by pdrion           ###   ########.fr       */
+/*   Created: 2020/01/16 20:03:06 by pdrion            #+#    #+#             */
+/*   Updated: 2020/01/16 20:04:57 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>

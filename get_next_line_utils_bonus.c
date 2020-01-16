@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pdrion <pdrion@student.42.frexport>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 14:05:32 by pdrion            #+#    #+#             */
-/*   Updated: 2020/01/16 19:46:53 by pdrion           ###   ########.fr       */
+/*   Created: 2020/01/16 20:02:14 by pdrion            #+#    #+#             */
+/*   Updated: 2020/01/16 20:02:19 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	ft_del(char **str)
 {
