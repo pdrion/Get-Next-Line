@@ -6,7 +6,7 @@
 /*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:05:32 by pdrion            #+#    #+#             */
-/*   Updated: 2020/01/16 14:28:56 by pdrion           ###   ########.fr       */
+/*   Updated: 2020/01/16 16:10:00 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	len_s = 0;
 	if (!s)
 		return (NULL);
-	while(s[len_s])
+	while (s[len_s])
 		len_s++;
 	if (len_s < start)
 		return (ft_strdup(""));
@@ -85,7 +85,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 	size_t			len1;
 	size_t			len2;
-	
+
 	i = 0;
 	len1 = 0;
 	len2 = 0;
@@ -95,7 +95,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		len1++;
 	while (s2[len2])
 		len2++;
-	if (!(result = (char*)malloc(sizeof(*result) *(len1 + len2 + 1))))
+	if (!(result = (char*)malloc(sizeof(*result) * (len1 + len2 + 1))))
 		return (NULL);
 	while (*s1 != '\0')
 		result[i++] = *s1++;
