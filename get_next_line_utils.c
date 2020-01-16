@@ -6,7 +6,7 @@
 /*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:05:32 by pdrion            #+#    #+#             */
-/*   Updated: 2020/01/16 16:10:00 by pdrion           ###   ########.fr       */
+/*   Updated: 2020/01/16 19:30:11 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ char	*ft_strdup(const char *s1)
 	dst = NULL;
 	while (s1[len])
 		len++;
-	if ((dst = (char *)malloc(len + 1)) == NULL)
-		return (NULL);
 	if (dst == NULL && s1 == NULL)
+		return (NULL);
+	if ((dst = (char *)malloc(len + 1)) == NULL)
 		return (NULL);
 	dst[len] = '\0';
 	while (len--)
@@ -64,6 +64,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 
 	len_s = 0;
+	result = NULL;
 	if (!s)
 		return (NULL);
 	while (s[len_s])
