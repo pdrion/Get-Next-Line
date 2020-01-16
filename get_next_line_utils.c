@@ -6,31 +6,19 @@
 /*   By: pdrion <pdrion@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:05:32 by pdrion            #+#    #+#             */
-/*   Updated: 2019/12/20 18:33:23 by pdrion           ###   ########.fr       */
+/*   Updated: 2020/01/16 14:28:56 by pdrion           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	del(char **str)
+void	ft_del(char **str)
 {
 	if (str != NULL)
 	{
 		free(*str);
 		*str = NULL;
 	}
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
 }
 
 char	*ft_strchr(const char *s, int c)
@@ -51,70 +39,63 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	char			*d;
-	const char		*s;
-
-	d = dst;
-	s = src;
-	if (d == NULL && s == NULL)
-		return (NULL);
-	while (n--)
-	{
-		*d++ = *s++;
-	}
-	return (dst);
-}
-
 char	*ft_strdup(const char *s1)
 {
 	char	*dst;
+	size_t	len;
 
+	len = 0;
 	dst = NULL;
-	if ((dst = (char *)malloc(ft_strlen(s1) + 1)) == NULL)
+	while (s1[len])
+		len++;
+	if ((dst = (char *)malloc(len + 1)) == NULL)
 		return (NULL);
-	ft_memcpy(dst, s1, ft_strlen(s1));
-	dst[ft_strlen(s1)] = '\0';
+	if (dst == NULL && s1 == NULL)
+		return (NULL);
+	dst[len] = '\0';
+	while (len--)
+		dst[len] = s1[len];
 	return (dst);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	size;
+	size_t	len_s;
 	char	*result;
 
-	i = 0;
+	len_s = 0;
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s) < start)
+	while(s[len_s])
+		len_s++;
+	if (len_s < start)
 		return (ft_strdup(""));
-	size = ft_strlen(s + start);
-	if (size < len)
-		len = size;
+	len = ((len_s - start) < len) ? (len_s - start) : len;
 	if (!(result = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
-	while (i < len)
-	{
-		result[i] = s[start + i];
-		i++;
-	}
-	result[i] = '\0';
+	result[len] = '\0';
+	while (len--)
+		result[len] = s[start + len];
 	return (result);
 }
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*result;
 	unsigned int	i;
-
+	size_t			len1;
+	size_t			len2;
+	
 	i = 0;
+	len1 = 0;
+	len2 = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (!(result = (char*)malloc(sizeof(*result) *
-		(ft_strlen(s1) + ft_strlen(s2) + 1))))
+	while (s1[len1])
+		len1++;
+	while (s2[len2])
+		len2++;
+	if (!(result = (char*)malloc(sizeof(*result) *(len1 + len2 + 1))))
 		return (NULL);
 	while (*s1 != '\0')
 		result[i++] = *s1++;
